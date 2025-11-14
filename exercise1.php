@@ -16,10 +16,10 @@ $age = 21;
 <body>
     <h1>Exercise 1</h1>
     <h2>My name is <?=$firstName ?> <?=$lastName ?>. I am <?=$age ?> years old.</h2>
-    <h2><?php echo "My name is $fistName $lastName. I am $age years old" ?></h2>
+    <h2><?php echo "My name is $firstName $lastName. I am $age years old" ?></h2>
 
     <?php 
-        echo "<h2>My name is $fistName $lastName. I am $age years old</h2>"
+        echo "<h2>My name is $firstName $lastName. I am $age years old</h2>"
     ?>
 
 </body>
