@@ -5,6 +5,11 @@ $meals = [
     ["name" => "Aloo gobi", "price" => 13]
 ];
 $total = 0;
+
+function getPriceWithVAT(float $price, float $vat): float {
+    return $price * (1+$vat/100);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,5 +29,6 @@ $total = 0;
         <?php } ?>
     </ul>
     <p>Total: <strong><?= $total ?>€</strong></p>
+    <p>Total with VAT: <strong><?= getPriceWithVAT($total, 20) ?>€</strong></p>
 </body>
 </html>
