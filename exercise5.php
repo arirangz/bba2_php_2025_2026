@@ -1,5 +1,4 @@
 <?php
-
 $games = [
     ["name" => "GTA 6", "editor" => "Rockstar", "year" => 2026],
     ["name" => "League Of Legends", "editor" => "Riot", "year" => 2009],
@@ -8,6 +7,8 @@ $games = [
     ["name" => "Minecraft", "editor" => "Mojang", "year" => 2011],
     ["name" => "Fornite", "editor" => "Epic Games", "year" => 2017],
 ];
+$recentGameYear = 0;
+$recentGameName = "";
 
 ?>
 <!DOCTYPE html>
@@ -20,9 +21,18 @@ $games = [
 <body>
     
     <ul>
-        <?php foreach ($games as $game) { ?>
+        <?php foreach ($games as $game) {
+            /* Add a if condition to compare the current $game["year"] with $recentGameYear
+                and store this game in the two variable
+            */
+            if ($game["year"] > $recentGameYear) {
+                $recentGameYear = $game["year"];
+                $recentGameName = $game["name"];
+            }
+            ?>
             <li>Name: <?=$game["name"]  ?> - Editor: <?= $game["editor"] ?> - Release year: <?= $game["year"] ?></li>
         <?php } ?>
     </ul>
+    <p>The most recent game is <?= $recentGameName ?> - <?= $recentGameYear ?></p>
 </body>
 </html>
