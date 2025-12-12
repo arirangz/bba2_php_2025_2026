@@ -2,6 +2,8 @@
 session_start();
 
 if(isset($_POST["username"])) {
+    // for security
+    session_regenerate_id(true);
     $_SESSION["username"] = $_POST["username"];
 }
 
