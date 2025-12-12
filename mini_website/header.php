@@ -6,12 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    
     <header>
         <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
+            <a href="index.php">Home</a>
         </nav>
-    </header>
+    </header>    
+    <main>
