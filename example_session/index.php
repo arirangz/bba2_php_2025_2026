@@ -21,7 +21,7 @@ if(isset($_POST["username"])) {
 <body>
     <h1>Example session</h1>
     <?php if (isset($_SESSION["username"])): ?>
-        <h2>Welcome <?= $_SESSION["username"] ?></h2>
+        <h2>Welcome <?= htmlspecialchars($_SESSION["username"]) ?></h2>
         <a href="logout.php">Logout</a>
     <?php else: ?>
         <h2>Sesion form</h2>
