@@ -3,10 +3,9 @@
 require_once "Car.php";
 
 $toyota = new Car("Toyota", 200);
-
+$toyota->setMaxSpeed(-50);
 
 $peugeot = new Car("Peugeot", 195);
-
 
 
 ?>
@@ -19,7 +18,7 @@ $peugeot = new Car("Peugeot", 195);
 </head>
 <body>
     <h1>Example instantiation</h1>
-    <h2>Car brand: <?=$toyota->brand  ?></h2>
+    <h2>Car brand: <?=$toyota->getBrand();  ?></h2>
     <h2>Car max speed: <?=$toyota->getMaxSpeedWithKm()  ?></h2>
 
     <h2><?= $peugeot->displayBrand() ?></h2>
