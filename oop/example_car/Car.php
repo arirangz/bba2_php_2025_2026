@@ -1,6 +1,7 @@
 <?php
 class Car
 {
+    protected const UNIT = "km/h";
 
     public function __construct(
         private string $brand,
@@ -34,6 +35,6 @@ class Car
 
     public function getMaxSpeedWithKm(): string
     {
-        return $this->maxSpeed . "km/h";
+        return $this->maxSpeed . self::UNIT;
     }
 }
